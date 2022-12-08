@@ -1,0 +1,14 @@
+@media screen and (max-width: 1024px) {
+
+  .container {
+    max-width: 920px;
+    padding: 0 2px;
+  }
+
+  header {
+    width: 30px;
+    .container {
+      padding: 28.9px 2px;
+    }
+  }
+}
