@@ -184,6 +184,10 @@
   }
 
   .header {
+    .container {
+      padding: 32.5px 20px;
+    }
+
     &__phone {
       font-size: 16px;
     }
@@ -208,7 +212,7 @@
     margin-top: 75px;
     margin-bottom: 20px;
     font-size: 34px;
-    line-height: 112%;
+    line-height: 38px;
     letter-spacing: 0.02em;
   }
 
@@ -226,7 +230,7 @@
 
   .normal {
     font-size: 16px;
-    line-height: 142%;
+    line-height: 23px;
     font-weight: 400;
     margin-bottom: 40px;
   }
@@ -269,13 +273,14 @@
     }
 
     &__button {
+      max-width: 114px;
       margin-top: 0;
     }
   }
 
   .choice {
     &__title {
-      margin-bottom: 30px;
+      margin-bottom: 31px;
     }
 
     &__tabs {
@@ -290,12 +295,17 @@
 
     &__card {
       height: 318px;
+
+      h3 {
+        margin-bottom: 14px;
+      }
     }
   }
 
   .collect {
     &__row {
       gap: 30px;
+      margin-bottom: 32px;
     }
 
     &__form {
@@ -324,6 +334,7 @@
 
       &-comment {
         height: 132px;
+        margin-bottom: 28px;
       }
 
       &::-webkit-input-placeholder {
@@ -384,8 +395,12 @@
   }
 
   .review {
+    &__title {
+      margin-top: 77px;
+    }
+
     &__subtitle {
-      margin-bottom: 50px;
+      margin-bottom: 49px;
     }
 
     &__cards {
@@ -404,6 +419,10 @@
   }
 
   .photo {
+    &__subtitle {
+      max-width: 318px;
+    }
+
     p {
       max-width: 318px;
       margin-bottom: 50px;
@@ -419,20 +438,23 @@
     }
 
     &__row-middle {
-      gap: 18px;
+      gap: 10px;
       margin: 18px 0;
 
       img {
         border-radius: 20px;
         height: 110px;
-        width: 105%;
       }
+    }
+
+    &__row-bottom {
+      gap: 10px;
     }
   }
 
   .history {
     p.normal {
-      margin-bottom: 52px;
+      margin-bottom: 50px;
     }
 
     &__card {
@@ -459,6 +481,7 @@
   .footer-offer {
     margin-top: 75px;
     margin-bottom: 75px;
+    gap: 31px;
 
     p {
       width: 291px;
@@ -478,6 +501,10 @@
 
     &__links-social {
       gap: 15px;
+
+      img {
+        margin-right: 5px;
+      }
     }
   }
 }
