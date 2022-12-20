@@ -467,7 +467,11 @@
               <p class="normal">facebook</p>
             </div>
             <div class="footer__links-social-block">
-              <img src="/icons/vk.svg" alt="vk" />
+              <img
+                src="/icons/vk.svg"
+                class="footer__links-social-block-vk"
+                alt="vk"
+              />
               <p class="normal">vkontakte</p>
             </div>
           </div>
@@ -478,7 +482,7 @@
     <script>
       const header = document.querySelector(".header");
       window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 450) {
+        if (window.pageYOffset > 5) {
           header.classList.add("header_fixed");
         } else {
           header.classList.remove("header_fixed");

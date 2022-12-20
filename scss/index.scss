@@ -206,11 +206,13 @@ h3 {
 
     &:hover {
       background: $OrangeHover;
+      color: #fff;
       cursor: pointer;
     }
 
     &:active {
       background: $OrangeActive;
+      color: $BlackText;
     }
   }
 }
@@ -286,17 +288,6 @@ h3 {
     flex-direction: column;
     padding: 50px;
     transition: all 0.3s ease;
-
-    &:hover {
-      .choice__text,
-      .choice__price {
-        margin-left: -10px;
-      }
-
-      .choice__text {
-        margin-top: -10px;
-      }
-    }
 
     &:hover {
       .choice__img {
@@ -791,6 +782,16 @@ h3 {
       .history__card-img {
         scale: 1.2;
       }
+
+      .history__card-footer-more {
+        background-color: $GreenHover;
+        padding: 7px 21px 7px 20px;
+        margin-bottom: -7px;
+
+        &:active {
+          background-color: $OrangeHover;
+        }
+      }
     }
 
     h3 {
@@ -829,16 +830,6 @@ h3 {
         transition: all 0.3s ease;
         cursor: pointer;
         padding: 0px 21px 0px 20px;
-
-        &:hover {
-          background-color: $GreenHover;
-          padding: 7px 21px 7px 20px;
-          margin-bottom: -7px;
-        }
-
-        &:active {
-          background-color: $OrangeHover;
-        }
 
         p.big {
           color: #ffffff;
@@ -963,6 +954,10 @@ h3 {
       &-block {
         img {
           margin-right: 10px;
+        }
+
+        &-vk {
+          margin-bottom: 3px;
         }
       }
 

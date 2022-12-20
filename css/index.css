@@ -188,10 +188,12 @@ h3 {
 }
 .offer__button:hover {
   background: #EFA501;
+  color: #fff;
   cursor: pointer;
 }
 .offer__button:active {
   background: #F8E6BE;
+  color: #1B1F2B;
 }
 
 .choice__title {
@@ -253,13 +255,6 @@ h3 {
   flex-direction: column;
   padding: 50px;
   transition: all 0.3s ease;
-}
-.choice__card:hover .choice__text,
-.choice__card:hover .choice__price {
-  margin-left: -10px;
-}
-.choice__card:hover .choice__text {
-  margin-top: -10px;
 }
 .choice__card:hover .choice__img {
   scale: 1.2;
@@ -677,6 +672,14 @@ h3 {
 .history__card:hover .history__card-img {
   scale: 1.2;
 }
+.history__card:hover .history__card-footer-more {
+  background-color: #286562;
+  padding: 7px 21px 7px 20px;
+  margin-bottom: -7px;
+}
+.history__card:hover .history__card-footer-more:active {
+  background-color: #EFA501;
+}
 .history__card h3 {
   color: #ffffff;
   margin-bottom: 37px;
@@ -710,14 +713,6 @@ h3 {
   transition: all 0.3s ease;
   cursor: pointer;
   padding: 0px 21px 0px 20px;
-}
-.history__card-footer-more:hover {
-  background-color: #286562;
-  padding: 7px 21px 7px 20px;
-  margin-bottom: -7px;
-}
-.history__card-footer-more:active {
-  background-color: #EFA501;
 }
 .history__card-footer-more p.big {
   color: #ffffff;
@@ -821,6 +816,9 @@ h3 {
 }
 .footer__links-social-block img {
   margin-right: 10px;
+}
+.footer__links-social-block-vk {
+  margin-bottom: 3px;
 }
 .footer__links-social p {
   color: #1B1F2B;
@@ -968,8 +966,34 @@ h3 {
   .header .header__img {
     content: url(../icons/logo_mobile.svg);
   }
+  .photo__row-top {
+    gap: 26px;
+  }
+  .photo__row-top img {
+    height: 110px;
+    border-radius: 20px;
+  }
+  .photo__row-middle {
+    gap: 18px;
+    margin: 18px 0;
+  }
+  .photo__row-middle img {
+    border-radius: 20px;
+    height: 110px;
+  }
+  .photo__row-bottom {
+    gap: 18px;
+  }
   .offer {
     height: 572px;
+  }
+  .footer-offer {
+    text-align: center;
+  }
+  .footer-offer__photo {
+    max-width: 250px;
+    height: 253px;
+    border-radius: 40px;
   }
   h1 {
     font-size: 34px;
@@ -1004,6 +1028,10 @@ h3 {
     font-size: 16px;
     line-height: 142%;
     letter-spacing: -0.01em;
+  }
+  .history__card {
+    padding: 30px;
+    border-radius: 20px;
   }
   .history ul {
     font-size: 16px;

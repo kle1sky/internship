@@ -197,8 +197,43 @@
     }
   }
 
+  .photo {
+    &__row-top {
+      gap: 26px;
+
+      img {
+        height: 110px;
+        border-radius: 20px;
+      }
+    }
+
+    &__row-middle {
+      gap: 18px;
+      margin: 18px 0;
+
+      img {
+        border-radius: 20px;
+        height: 110px;
+      }
+    }
+
+    &__row-bottom {
+      gap: 18px;
+    }
+  }
+
   .offer {
     height: 572px;
+  }
+
+  .footer-offer {
+    text-align: center;
+
+    &__photo {
+      max-width: 250px;
+      height: 253px;
+      border-radius: 40px;
+    }
   }
 
   h1 {
@@ -242,6 +277,11 @@
   }
 
   .history {
+    &__card {
+      padding: 30px;
+      border-radius: 20px;
+    }
+
     ul {
       font-size: 16px;
       line-height: 142%;
