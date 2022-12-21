@@ -78,7 +78,7 @@ h3 {
 
 .header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   left: 50%;
   transform: translate(-50%);
   max-height: 88px;
@@ -96,9 +96,11 @@ h3 {
   }
 
   &_fixed {
+    position: fixed;
     background: rgba(243, 239, 232, 0.6);
     backdrop-filter: blur(27px);
     z-index: 2;
+    animation: FadeInHeader 0.5s;
 
     .header__link {
       &::after {
@@ -397,6 +399,10 @@ h3 {
     -moz-appearance: none;
     appearance: none;
 
+    &_selected {
+      color: $BlackText;
+    }
+
     option {
       color: $BlackText;
     }
@@ -513,6 +519,7 @@ h3 {
       margin-right: 11px;
       background-repeat: no-repeat;
       background-position: center center;
+      box-sizing: border-box;
     }
 
     .custom-radio:checked + label::before {
@@ -580,6 +587,7 @@ h3 {
       border-radius: 20%;
       background-repeat: no-repeat;
       background-position: center center;
+      box-sizing: border-box;
     }
 
     .custom-checkbox:checked + label::before {
@@ -785,8 +793,8 @@ h3 {
 
       .history__card-footer-more {
         background-color: $GreenHover;
-        padding: 7px 21px 7px 20px;
-        margin-bottom: -7px;
+        padding: 0 21px;
+        margin-left: -21px;
 
         &:active {
           background-color: $OrangeHover;
@@ -817,7 +825,6 @@ h3 {
     }
 
     &-footer {
-      margin-left: -20px;
       margin-top: auto;
       display: flex;
       justify-content: space-between;
@@ -826,10 +833,11 @@ h3 {
         display: flex;
         align-items: center;
         max-width: 199px;
+        height: 42px;
         border-radius: 50px;
         transition: all 0.3s ease;
         cursor: pointer;
-        padding: 0px 21px 0px 20px;
+        padding: 0px 0px;
 
         p.big {
           color: #ffffff;
@@ -945,10 +953,12 @@ h3 {
 
     &-social {
       display: flex;
+      align-items: center;
       gap: 25px;
 
       > div {
         display: flex;
+        align-items: center;
       }
 
       &-block {
@@ -984,6 +994,18 @@ h3 {
         width: 100%;
       }
     }
+  }
+}
+
+@keyframes FadeInHeader {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0%);
   }
 }
 

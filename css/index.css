@@ -76,7 +76,7 @@ h3 {
 
 .header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   left: 50%;
   transform: translate(-50%);
   max-height: 88px;
@@ -92,9 +92,11 @@ h3 {
   padding: 28.8px 15px;
 }
 .header_fixed {
+  position: fixed;
   background: rgba(243, 239, 232, 0.6);
   backdrop-filter: blur(27px);
   z-index: 2;
+  animation: FadeInHeader 0.5s;
 }
 .header_fixed .header__link::after {
   content: "";
@@ -347,6 +349,9 @@ h3 {
   -moz-appearance: none;
   appearance: none;
 }
+.collect__dropdown_selected {
+  color: #1B1F2B;
+}
 .collect__dropdown option {
   color: #1B1F2B;
 }
@@ -450,6 +455,7 @@ h3 {
   margin-right: 11px;
   background-repeat: no-repeat;
   background-position: center center;
+  box-sizing: border-box;
 }
 .collect__radio-buttons .custom-radio:checked + label::before {
   border-color: #1B1F2B;
@@ -508,6 +514,7 @@ h3 {
   border-radius: 20%;
   background-repeat: no-repeat;
   background-position: center center;
+  box-sizing: border-box;
 }
 .collect__checkbox .custom-checkbox:checked + label::before {
   background-color: none;
@@ -674,8 +681,8 @@ h3 {
 }
 .history__card:hover .history__card-footer-more {
   background-color: #286562;
-  padding: 7px 21px 7px 20px;
-  margin-bottom: -7px;
+  padding: 0 21px;
+  margin-left: -21px;
 }
 .history__card:hover .history__card-footer-more:active {
   background-color: #EFA501;
@@ -700,7 +707,6 @@ h3 {
   color: #ffffff;
 }
 .history__card-footer {
-  margin-left: -20px;
   margin-top: auto;
   display: flex;
   justify-content: space-between;
@@ -709,10 +715,11 @@ h3 {
   display: flex;
   align-items: center;
   max-width: 199px;
+  height: 42px;
   border-radius: 50px;
   transition: all 0.3s ease;
   cursor: pointer;
-  padding: 0px 21px 0px 20px;
+  padding: 0px 0px;
 }
 .history__card-footer-more p.big {
   color: #ffffff;
@@ -809,10 +816,12 @@ h3 {
 }
 .footer__links-social {
   display: flex;
+  align-items: center;
   gap: 25px;
 }
 .footer__links-social > div {
   display: flex;
+  align-items: center;
 }
 .footer__links-social-block img {
   margin-right: 10px;
@@ -841,6 +850,16 @@ h3 {
   width: 100%;
 }
 
+@keyframes FadeInHeader {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0%);
+  }
+}
 @media screen and (max-width: 1024px) {
   .container {
     padding: 0 53px;
@@ -954,9 +973,6 @@ h3 {
   }
 }
 @media screen and (max-width: 576px) {
-  .header__fixed .container .header__img {
-    content: url(../icons/logo_mobile_bl.svg);
-  }
   .header .container {
     padding: 32.5px 20px;
   }
@@ -964,7 +980,7 @@ h3 {
     font-size: 16px;
   }
   .header .header__img {
-    content: url(../icons/logo_mobile.svg);
+    width: 133px;
   }
   .photo__row-top {
     gap: 26px;
@@ -984,6 +1000,17 @@ h3 {
   .photo__row-bottom {
     gap: 18px;
   }
+  .choice__tabs {
+    gap: 14px 14px;
+    margin-bottom: 65px;
+  }
+  .choice__tabs a {
+    font-size: 20px;
+    line-height: 142%;
+  }
+  .choice__card {
+    height: 410px;
+  }
   .offer {
     height: 572px;
   }
@@ -994,6 +1021,40 @@ h3 {
     max-width: 250px;
     height: 253px;
     border-radius: 40px;
+  }
+  .collect__form {
+    padding: 20px 20px 40px;
+    border-radius: 30px;
+  }
+  .collect__form .collect__radio-buttons {
+    gap: 30px;
+  }
+  .collect__form .collect__radio-buttons label {
+    font-size: 16px;
+    line-height: 142%;
+  }
+  .collect__form .collect__radio-buttons .custom-radio + label::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+  }
+  .collect__form .collect__radio-buttons .custom-radio:checked + label::before {
+    background: url(../icons/circle.svg) center/8px 8px no-repeat;
+  }
+  .collect__form__checkbox .custom-checkbox + label {
+    align-items: flex-start;
+  }
+  .collect__form .custom-checkbox + label::before {
+    content: "";
+    display: inline-block;
+    min-width: 16px;
+    height: 16px;
+    border: 2px solid #1B1F2B;
+    margin-right: 10px;
+    border-radius: 20%;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
   h1 {
     font-size: 34px;
@@ -1040,6 +1101,12 @@ h3 {
   .history__card-footer-links {
     display: none;
   }
+  .footer__links-social {
+    gap: 15px;
+  }
+  .review__cards__block {
+    border-radius: 20px;
+  }
 }
 @media screen and (max-width: 360px) {
   .footer-offer {
@@ -1076,6 +1143,17 @@ h3 {
   .choice__card {
     height: 318px;
   }
+  .choice__card:hover .choice__img {
+    scale: 1;
+  }
+  .choice__card:hover .choice__block {
+    padding: 0;
+    background: none;
+    margin-left: 0;
+  }
+  .choice__card:hover .choice__block:active {
+    background: none;
+  }
   .choice__card h3 {
     margin-bottom: 14px;
   }
@@ -1086,19 +1164,6 @@ h3 {
   .collect__form {
     padding: 20px 20px 40px;
     border-radius: 30px;
-  }
-  .collect__form .collect__radio-buttons {
-    gap: 30px;
-  }
-  .collect__form .collect__radio-buttons label {
-    font-size: 16px;
-    line-height: 142%;
-  }
-  .collect__form .collect__radio-buttons .custom-radio + label::before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
   }
   .collect__input {
     padding-left: 10px;
@@ -1128,20 +1193,6 @@ h3 {
   }
   .collect__checkbox span {
     font-size: 16px;
-  }
-  .collect__checkbox .custom-checkbox + label {
-    align-items: flex-start;
-  }
-  .collect .custom-checkbox + label::before {
-    content: "";
-    display: inline-block;
-    width: 33px;
-    height: 16px;
-    border: 2px solid #1B1F2B;
-    margin-right: 10px;
-    border-radius: 20%;
-    background-repeat: no-repeat;
-    background-position: center center;
   }
   .collect__buttons .reset {
     margin-left: 10px;
@@ -1200,6 +1251,17 @@ h3 {
     padding: 30px;
     border-radius: 20px;
     min-height: 455px;
+  }
+  .history__card:hover .history__card-img {
+    scale: 1;
+  }
+  .history__card:hover .history__card-footer-more {
+    background: none;
+    padding: 0;
+    margin-left: 0;
+  }
+  .history__card:hover .history__card-footer-more:active {
+    background: none;
   }
   .history__card-list {
     margin-left: 24.5px;

@@ -176,7 +176,7 @@
           </div>
           <div class="collect__item">
             <p class="normal">Направление</p>
-            <select name="dropdown" class="collect__dropdown">
+            <select class="collect__dropdown">
               <option value="" hidden>Куда хотите ехать</option>
               <option value="#">Сперва новые</option>
               <option value="#">Сперва старые</option>
@@ -379,9 +379,9 @@
             />
           </div>
           <div class="history__card-footer-links">
-            <a href="" class="links__item normal"> instagram </a>
-            <a href="" class="links__item normal"> facebook </a>
-            <a href="" class="links__item normal"> YouTube </a>
+            <a href="" class="links__item normal">instagram</a>
+            <a href="" class="links__item normal">facebook</a>
+            <a href="" class="links__item normal">YouTube</a>
           </div>
         </div>
       </div>
@@ -482,7 +482,7 @@
     <script>
       const header = document.querySelector(".header");
       window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 5) {
+        if (window.pageYOffset > 450) {
           header.classList.add("header_fixed");
         } else {
           header.classList.remove("header_fixed");
@@ -498,6 +498,11 @@
           });
           item.classList.add("active");
         });
+      });
+
+      let select = document.querySelector(".collect__dropdown");
+      select.addEventListener("change", () => {
+        select.classList.add("collect__dropdown_selected");
       });
     </script>
   </body>
