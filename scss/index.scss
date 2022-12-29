@@ -201,7 +201,7 @@ h3 {
     line-height: 142%;
     letter-spacing: -0.01em;
     color: #1b1f2b;
-    transition: color, background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 
     &:hover {
       background: $OrangeHover;
@@ -317,7 +317,7 @@ h3 {
   }
 
   &__price {
-    color: #ffff;
+    color: #fff;
   }
 
   &__block {
@@ -337,7 +337,7 @@ h3 {
   }
 
   &__more {
-    color: #ffff;
+    color: #fff;
   }
 
   &__cards {
@@ -611,7 +611,7 @@ h3 {
       }
 
       p {
-        color: #ffff;
+        color: #fff;
         margin: 0;
       }
     }
@@ -838,7 +838,7 @@ h3 {
         gap: 35px;
 
         a {
-          color: #ffff;
+          color: #fff;
           position: relative;
           margin-bottom: 0;
 

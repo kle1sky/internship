@@ -183,7 +183,7 @@ h3 {
   line-height: 142%;
   letter-spacing: -0.01em;
   color: #1b1f2b;
-  transition: color, background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .offer__button:hover {
   background: #EFA501;
@@ -277,7 +277,7 @@ h3 {
   object-position: center;
 }
 .choice__price {
-  color: white;
+  color: #fff;
 }
 .choice__block {
   display: flex;
@@ -294,7 +294,7 @@ h3 {
   height: 15px;
 }
 .choice__more {
-  color: white;
+  color: #fff;
 }
 .choice__cards {
   display: grid;
@@ -532,7 +532,7 @@ h3 {
   background-color: #627F7E;
 }
 .collect__buttons .find p {
-  color: white;
+  color: #fff;
   margin: 0;
 }
 .collect__buttons .reset {
@@ -717,7 +717,7 @@ h3 {
   gap: 35px;
 }
 .history__card-footer-links a {
-  color: white;
+  color: #fff;
   position: relative;
   margin-bottom: 0;
 }
